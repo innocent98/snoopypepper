@@ -5,7 +5,7 @@ const About = () => {
     <div className="about" id="about">
       <h2>About us</h2>
       <h4>WHAT IS SNOOPY PEPE?</h4>
-      <p>
+      <p className="abtxt">
         Snoopy Pepe emerges as a beacon of innovation and enchantment. Combining
         the iconic Pepe meme with the endearing spirit of Snoopy, this
         remarkable token transcends boundaries and captivates the imagination of
@@ -21,10 +21,26 @@ const About = () => {
       <a href="#">Read More...</a>
 
       <h2 style={{ marginTop: "100px" }}>Snoopy Pepe Three Function </h2>
+      <p>Snoopy pepe employ 3 simple functions.</p>
+
+      <div className="wrapper">
+        <div className="circle"></div>
+        <p>Reflection</p>
+      </div>
+
+      <div className="wrapper">
+        <div className="circle"></div>
+        <p>LP acquisition</p>
+      </div>
+
+      <div className="wrapper">
+        <div className="circle"></div>
+        <p>Burn</p>
+      </div>
+
       <p>
-        Snoopy pepe employ 3 simple functions Reflection + LP acquisition +
-        Burn. IIn each sell swap, the transaction is charged a 8% fee, which is
-        splited into 3 ways, while the buy swap is charge at 0% tax.
+        In each sell swap, the transaction is charged a 8% fee, which is splited
+        into 3 ways, while the buy swap is charge at 0% tax.
       </p>
 
       <p>

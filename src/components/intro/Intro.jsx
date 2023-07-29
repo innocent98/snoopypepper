@@ -20,8 +20,13 @@ const Intro = () => {
       </a>
 
       <div className="img">
-        <img src="/tw.png" alt="" />
-        <img src="/tg.png" alt="" />
+        <a href="https://twitter.com/snoopy_pepe/" target="_blank">
+          <img src="/tw.png" alt="" />
+        </a>
+
+        <a href="https://t.me/SnoopyPepe" target="_blank">
+          <img src="/tg.png" alt="" />
+        </a>
       </div>
     </div>
   );

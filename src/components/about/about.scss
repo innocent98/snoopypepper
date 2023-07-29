@@ -5,8 +5,25 @@
   padding-bottom: 0;
   color: white;
   position: relative;
-  @include tab{
+  @include tab {
     padding: 20px;
+  }
+
+  .abtxt {
+    text-align: center;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: -20px;
+    .circle {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $primary;
+    }
   }
 
   h2 {
@@ -22,7 +39,7 @@
     font-family: $popins;
     color: white;
     font-size: 20px;
-    @include tab{
+    @include tab {
       font-size: 16px;
     }
   }
@@ -39,7 +56,7 @@
     right: 0;
     bottom: -80px;
     width: 150px;
-    @include tab{
+    @include tab {
       width: 100px;
       bottom: -40px;
       // display: none;

@@ -1,7 +1,15 @@
 @import "../../../global.scss";
 
 .utilities {
+  position: relative;
+  // background-image: url('/utilities.png');
   img {
     width: 100%;
+  }
+
+  .tokenomics {
+    position: absolute;
+    z-index: 8;
+    top: 27%;
   }
 }
