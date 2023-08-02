@@ -24,7 +24,7 @@ const Contact = () => {
           <h2>Contact Us</h2>
           <div className="img">
             <p>Telegram</p>
-            <a href="https://t.me/SnoopyPepe" target="_blank">
+            <a href="https://t.me/Snoopy_Pepe" target="_blank">
               <img src="/tg.png" alt="" />
             </a>
           </div>

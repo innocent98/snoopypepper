@@ -24,7 +24,7 @@ const Intro = () => {
           <img src="/tw.png" alt="" />
         </a>
 
-        <a href="https://t.me/SnoopyPepe" target="_blank">
+        <a href="https://t.me/Snoopy_Pepe" target="_blank">
           <img src="/tg.png" alt="" />
         </a>
       </div>
