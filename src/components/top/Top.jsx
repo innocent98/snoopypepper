@@ -9,7 +9,7 @@ const Top = ({ setMenu }) => {
     <div className="top">
       <div className="wrapper">
         <div className="left">
-          <img src="/LOGO.png" alt="" />
+          <img src="/logo.png" alt="" />
         </div>
 
         <div className="right">
@@ -36,8 +36,8 @@ const Top = ({ setMenu }) => {
               Contact Us
             </a>
 
-            <a href="#" className="btn">
-              Buy Token
+            <a href="/airdrop" className="link">
+              Airdrop
             </a>
           </div>
 

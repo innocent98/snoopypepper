@@ -26,7 +26,7 @@
     .left {
       flex: 1;
       img {
-        height: 400px;
+        height: 300px;
         @include tab {
           height: 200px;
         }
@@ -35,11 +35,11 @@
 
     .right {
       flex: 1.5;
-      font-size: 48px;
+      font-size: 30px;
       font-weight: 700;
       font-family: $popins;
       color: white;
-      text-align: center;
+      text-align: left;
       @include l {
         font-size: 30px;
       }

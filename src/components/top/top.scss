@@ -28,7 +28,7 @@
       }
 
       img {
-        width: 80px;
+        width: 50px;
         @include tab {
           width: 50px;
         }
@@ -36,7 +36,7 @@
     }
 
     .right {
-      flex: 9;
+      flex: 5;
       @include tab {
         flex: none;
       }

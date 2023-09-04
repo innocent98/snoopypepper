@@ -15,9 +15,6 @@ const Sidebar = ({ setMenu, menu }) => {
       <a href="#home" className="link active" onClick={handleMenu}>
         Home
       </a>
-      <a href="#about" className="link" onClick={handleMenu}>
-        About Us
-      </a>
       <a
         href="https://drive.google.com/uc?id=1iJI9RrkEaNNVfFIFFnDiYw_QvahNb6n3&export=download"
         target="_blank"
@@ -27,11 +24,14 @@ const Sidebar = ({ setMenu, menu }) => {
       >
         White Paper
       </a>
-      <a href="#utilities" className="link" onClick={handleMenu}>
-        Tokenomics
+      <a href="#about" className="link" onClick={handleMenu}>
+        About
       </a>
       <a href="#contact" className="link" onClick={handleMenu}>
-        Contact Us
+        Contact
+      </a>
+      <a href="/airdrop" className="link" onClick={handleMenu}>
+        Airdrop
       </a>
     </div>
   );

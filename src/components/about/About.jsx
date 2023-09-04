@@ -3,66 +3,49 @@ import "./about.scss";
 const About = () => {
   return (
     <div className="about" id="about">
-      <h2>About us</h2>
-      <h4>WHAT IS SNOOPY PEPE?</h4>
+      <h2>ABOUT US</h2>
+      <h4>WHAT IS GATOR INU?</h4>
+
       <p className="abtxt">
-        Snoopy Pepe emerges as a beacon of innovation and enchantment. Combining
-        the iconic Pepe meme with the endearing spirit of Snoopy, this
-        remarkable token transcends boundaries and captivates the imagination of
-        a global community. With its roots firmly planted in the Binance Smart
-        Chain (BSC), Snoopy Pepe offers an extraordinary journey filled with
-        laughter, creativity, and limitless opportunities. At its core, Snoopy
-        Pepe is a community-driven revolution. Built on the principles of
-        inclusivity and collaboration, it empowers individuals to participate in
-        an ecosystem where their ideas are valued and their voices heard. With
-        its open-source, audited smart contracts, Snoopy Pepe ensures
-        transparency and security, instilling confidence in every interaction.
+        Gator Inu is not just a token; it's an entire ecosystem meticulously
+        crafted to deliver seamless, secure, and rewarding experiences. From
+        yield farming to decentralized applications, Gator Inu offers a
+        comprehensive suite of tools for investors, traders, and enthusiasts.
       </p>
-      <a href="#">Read More...</a>
-
-      <h2 style={{ marginTop: "100px" }}>Snoopy Pepe Three Function </h2>
-      <p>Snoopy pepe employ 3 simple functions.</p>
-
-      <div className="wrapper">
-        <div className="circle"></div>
-        <p>Reflection</p>
-      </div>
-
-      <div className="wrapper">
-        <div className="circle"></div>
-        <p>LP acquisition</p>
-      </div>
-
-      <div className="wrapper">
-        <div className="circle"></div>
-        <p>Burn</p>
-      </div>
-
-      <p>
-        In each sell swap, the transaction is charged a 8% fee, which is splited
-        into 3 ways, while the buy swap is charge at 0% tax.
+      <p className="abtxt">
+        Gator Inu beckons you to embark on an extraordinary journey that merges
+        cutting-edge technology with the boundless spirit of exploration. This
+        is not just a cryptocurrency project; it's a movement that propels you
+        towards financial empowerment and new possibilities.
+      </p>
+      <p className="abtxt">
+        Are you ready to stride boldly into the world of decentralized finance,
+        guided by the Gator Inu's unwavering strength? Join us now and become a
+        part of a revolution that's rewriting the rules, redefining success, and
+        releasing the potential within us all. Invest in innovation. Invest in
+        Gator Inu.
       </p>
 
-      <p>
-        2% fee of the sell tax will be redistributed to all existing holders,
-        i.e holders holding minimum of 100,000 snoopypepe token as automatic
-        reflection in BNB Smart Chain.
+      <h2>OUR MISSION</h2>
+      <h4>Empowering the Future of Decentralized Finance</h4>
+
+      <p className="abtxt">
+        At Gator Inu, our mission is clear: to revolutionize the landscape of
+        decentralized finance (DeFi) and empower individuals around the world
+        with innovative solutions that transcend traditional financial
+        boundaries. Our journey is guided by a steadfast commitment to bring
+        forth a new era of financial accessibility, inclusivity, and
+        empowerment.
       </p>
 
-      <p>
-        Another 2% fee of the sell tax will be automatically burn, While 3% will
-        go to the marketing wallet.
+      <h4> Pioneering Innovation:</h4>
+      <p className="abtxt">
+        We're not content with the status quo. Our mission is to lead the charge
+        in DeFi innovation, introducing novel concepts and solutions that
+        challenge norms and expand possibilities. Through cutting-edge
+        technology, creative utility offerings, and visionary strategies, we
+        pave the way for a more dynamic and inclusive financial ecosystem.
       </p>
-
-      <p>
-        1% of the Snoopypepe tokens from the sell tax are paired automatically
-        with the previously mentioned BNB and added as a liquidity pair on the
-        decentralize exchanges.
-      </p>
-
-      <p>This fee powers the project.</p>
-
-      <img src="/logo_o.png" alt="" />
     </div>
   );
 };

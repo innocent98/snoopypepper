@@ -3,20 +3,20 @@ import "./contact.scss";
 const Contact = () => {
   return (
     <div className="contact" id="contact">
-      <h2>Our Team </h2>
+      <h2>OUR TEAM </h2>
       <p>
-        Our team at Snoopy Pepe is a dynamic force of passionate visionaries
-        dedicated to bringing joy, innovation, and lasting impact to the crypto
-        world. With a diverse range of expertise and a shared love for all
-        things meme-related, we come together with a common goal: to redefine
-        the possibilities of the Snoopy Pepe ecosystem and create an
-        unparalleled experience for our community. Led by experienced
-        professionals with a deep understanding of blockchain technology and a
-        keen eye for creativity, our team combines technical prowess with a
-        relentless drive for excellence. From developers and designers to
-        marketing specialists and community managers, each member contributes
-        their unique talents. skillsets, and perspectives to propel Snoopy Pepe
-        forward
+        At the heart of Gator Inu's transformative journey stands dedicated and
+        visionary core team. Comprising a diverse blend of blockchain experts,
+        developers, finance professionals, and strategic thinkers, the Gator Inu
+        core team is united by a shared mission – to redefine the future of
+        decentralized finance.
+      </p>
+      <p>
+         Leadership with a Purpose: Led by accomplished individuals with years
+        of experience in blockchain technology and financial innovation, the
+        core team sets the strategic direction for Gator Inu. Their expertise
+        and strategic insights guide the project's growth and ensure that every
+        step
       </p>
 
       <div className="wrapper">
@@ -38,13 +38,13 @@ const Contact = () => {
 
           <div className="img">
             <p>Email:</p>
-            <a href="mailto:support@snoopypepe.com">support@snoopypepe.com</a>
+            <a href="mailto:support@gatorinu.com">support@gatorinu.com</a>
           </div>
         </div>
 
-        <div className="right">
+        {/* <div className="right">
           <img src="logo_i.png" alt="" />
-        </div>
+        </div> */}
       </div>
 
       <p
@@ -55,7 +55,7 @@ const Contact = () => {
           color: "lightgray",
         }}
       >
-        (c) 2023 Snoopy pepe. All Rights Reserved
+        (c) 2023 Gator-inu. All Rights Reserved
       </p>
     </div>
   );

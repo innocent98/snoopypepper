@@ -1,15 +1,48 @@
 @import "../../../global.scss";
 
 .utilities {
-  position: relative;
-  // background-image: url('/utilities.png');
+  // position: relative;
+  width: 100%;
+
   img {
     width: 100%;
   }
 
-  .tokenomics {
-    position: absolute;
-    z-index: 8;
-    top: 27%;
+  h2 {
+    color: $primary;
+    font-family: $popins;
+    padding: 0 100px;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .airdroping {
+    padding: 0px 100px;
+    @include l {
+      padding: 0px 10px;
+    }
+
+    p {
+      font-family: $popins;
+      color: white;
+      font-size: 20px;
+      @include tab {
+        font-size: 16px;
+      }
+
+      a {
+        text-decoration: none;
+        background-color: $primary;
+        border-radius: 30px;
+        padding: 10px 20px;
+        color: black;
+        font-family: $popins;
+        border: 1px solid white;
+      }
+    }
+
+    .abtxt {
+      text-align: left;
+    }
   }
 }

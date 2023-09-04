@@ -1,0 +1,348 @@
+@import "../../../global.scss";
+
+.airdrop {
+  background-color: #000000;
+  // height: 100vh;
+  width: 100vw;
+  .airdropCon {
+    margin: 30px;
+    background-color: #191919;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    padding-top: 10px;
+    position: relative;
+
+    h4 {
+      color: #ffc704;
+      font-size: 22px;
+      font-weight: 700;
+      font-family: $popins;
+      // padding: 20px;
+      text-align: center;
+      @include tab {
+        font-size: 14px;
+      }
+    }
+
+    .timerSect {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h4 {
+        color: white;
+      }
+
+      .timerBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 40px;
+        @include tab {
+          gap: 2px;
+        }
+        p {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: white;
+          // border: solid 1px lightgray;
+          padding: 14px;
+          border-radius: 8px;
+          width: 30px;
+          font-size: 20px;
+          font-family: $popins;
+          font-weight: 700;
+          @include tab {
+            width: 20px;
+            font-size: 15px;
+          }
+          span {
+            font-size: 12px;
+            font-weight: 400;
+            color: white;
+            @include tab {
+              font-size: 10px;
+            }
+          }
+        }
+        span {
+          font-size: 60px;
+          color: $green;
+          font-weight: 700;
+          @include tab {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 400px;
+      @include tab {
+        width: 250px;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        label {
+          color: white;
+          font-family: $popins;
+          font-weight: 400;
+          font-size: 14px;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 5px;
+          @include tab {
+            font-size: 12px;
+          }
+          .follow {
+            color: $green;
+            cursor: pointer;
+            text-decoration: none;
+            width: "auto";
+            font-family: $popins;
+            font-weight: bold;
+          }
+        }
+
+        input {
+          padding: 15px;
+          border-radius: 8px;
+          border: none;
+          background-color: white;
+          color: black;
+          //   font-family: $popins;
+          @include tab {
+            padding: 10px;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      button {
+        background-color: $primary;
+        width: 100px;
+        font-weight: 700;
+        font-size: 14px;
+        font-family: $popins;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        color: black;
+        cursor: pointer;
+        &:disabled {
+          cursor: not-allowed;
+        }
+        @include tab {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .airdropDetails {
+      width: 400px;
+      color: white;
+      // margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include tab {
+        width: 230px;
+      }
+
+      h5 {
+        font-family: $popins;
+        font-size: 14px;
+        font-weight: 400;
+        span {
+          a {
+            font-weight: 700;
+            font-style: 12px;
+            font-family: $popins;
+            color: #007aff;
+          }
+        }
+      }
+
+      p {
+        color: #6b6b6b;
+        font-family: $popins;
+        font-weight: 500px;
+        font-size: 16px;
+        // margin-top: 15px;
+
+        span{
+          color: $green;
+        }
+      }
+
+      .details {
+        margin-top: 40px;
+        display: flex;
+        gap: 55px;
+        @include tab {
+          gap: 10px;
+        }
+        .det {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          align-items: center;
+          h5 {
+            color: $green;
+            font-weight: 700;
+            font-size: 18px;
+            font-family: $popins;
+            @include tab {
+              font-size: 14px;
+            }
+          }
+          h4 {
+            color: white;
+            margin-bottom: -15px;
+            margin-top: -15px;
+            @include tab {
+              font-size: 10px;
+            }
+          }
+          p {
+            margin-top: 0;
+            @include tab {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      button {
+        background-color: $primary;
+        width: 100px;
+        font-weight: 700;
+        font-size: 14px;
+        font-family: $popins;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        color: black;
+        cursor: pointer;
+        margin-top: 20px;
+        align-self: center;
+        &:disabled {
+          cursor: not-allowed;
+        }
+        @include tab {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .alertBox {
+      // display: flex; /*to be remved later*/
+      background-color: white;
+      padding: 10px;
+      color: #6b6b6b;
+      position: absolute;
+      box-shadow: 1px 4px 12px 0px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 1px 4px 12px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 1px 4px 12px 0px rgba(0, 0, 0, 0.5);
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: $popins;
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 20px;
+        @include tab {
+          font-size: 12px;
+        }
+        .icon {
+          cursor: pointer;
+        }
+      }
+
+      hr {
+        margin: 20px 0;
+      }
+
+      .content {
+        font-family: $popins;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+        @include tab {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .team {
+    padding: 0px 100px;
+    @include l {
+      padding: 0px 10px;
+    }
+
+    h2 {
+      color: $primary;
+      font-family: $popins;
+    }
+
+    p {
+      font-family: $popins;
+      color: white;
+      font-size: 20px;
+      text-align: left;
+      @include tab {
+        font-size: 16px;
+      }
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 60px;
+
+      .left {
+        .img {
+          display: flex;
+          align-items: center;
+          margin-bottom: -20px;
+          gap: 10px;
+          img {
+            width: 35px;
+            cursor: pointer;
+          }
+
+          a {
+            text-decoration: none;
+            color: $primary;
+          }
+        }
+      }
+
+      .right {
+        img {
+          width: 50px;
+          cursor: pointer;
+          transform: scaleX(-1);
+        }
+      }
+    }
+  }
+}

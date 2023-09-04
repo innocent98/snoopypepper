@@ -5,21 +5,22 @@ const Intro = () => {
     <div className="intro" id="intro">
       <div className="wrapper">
         <div className="left">
-          <img src="/logo.png" alt="" />
+          <img src="/logo_b.png" alt="" />
         </div>
 
         <div className="right">
-          Welcome to the extraordinary world of <span>Snoopy Pepe</span>, where
-          memes and cryptocurrencies unite in a breathtaking spectacle of
-          innovation.
+          Welcome to the dawn of a new era in the crypto universe –
+          <span> Gator Inu,</span> a dynamic and innovative cryptocurrency
+          project that's poised to redefine the way we perceive and engage with
+          decentralized finance.
         </div>
       </div>
 
-      <a href="#" className="btn">
+      {/* <a href="#" className="btn">
         Buy Token
-      </a>
+      </a> */}
 
-      <div className="img">
+      {/* <div className="img">
         <a href="https://twitter.com/snoopy_pepe/" target="_blank">
           <img src="/tw.png" alt="" />
         </a>
@@ -27,7 +28,7 @@ const Intro = () => {
         <a href="https://t.me/Snoopy_Pepe" target="_blank">
           <img src="/tg.png" alt="" />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
