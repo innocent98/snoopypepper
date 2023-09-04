@@ -6,7 +6,7 @@ const Utilities = () => {
       <h2>TOKENOMICS</h2>
 
       <div className="tokenomics">
-        <img src="tokenomics.jpg" alt="" />
+        <img src="tokenomics.png" alt="" />
       </div>
 
       <div className="airdroping">
