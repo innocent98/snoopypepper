@@ -38,7 +38,7 @@ const About = () => {
         empowerment.
       </p>
 
-      <h4> Pioneering Innovation:</h4>
+      <h4 style={{marginTop: 0}}> Pioneering Innovation:</h4>
       <p className="abtxt">
         We're not content with the status quo. Our mission is to lead the charge
         in DeFi innovation, introducing novel concepts and solutions that

@@ -51,7 +51,8 @@
         a {
           margin-left: 50px;
           text-decoration: none;
-          font-family: $popins;
+          font-family: $nunito;
+          font-weight: 700;
           color: white;
           font-size: 20px;
           @include l {
@@ -71,7 +72,7 @@
 
         .active {
           color: $primary;
-          text-decoration: underline;
+          // text-decoration: underline;
         }
 
         .btn {

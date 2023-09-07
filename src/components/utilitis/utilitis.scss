@@ -10,10 +10,12 @@
 
   h2 {
     color: $primary;
-    font-family: $popins;
+    font-family: $inter;
     padding: 0 100px;
     padding-top: 50px;
-    text-align: center;
+    text-align: left;
+    font-weight: 700;
+    font-size: 34px;
   }
 
   .airdroping {
@@ -22,10 +24,17 @@
       padding: 0px 10px;
     }
 
+    h2 {
+      text-align: center;
+      font-family: $inter;
+      font-weight: 700;
+    }
+
     p {
-      font-family: $popins;
+      font-family: $lato;
       color: white;
       font-size: 20px;
+      font-weight: 700;
       @include tab {
         font-size: 16px;
       }
@@ -36,9 +45,15 @@
         border-radius: 30px;
         padding: 10px 20px;
         color: black;
-        font-family: $popins;
+        font-family: $nunito;
+        font-weight: 700;
         border: 1px solid white;
       }
+    }
+
+    .participate {
+      font-family: $nunito;
+      font-weight: 700;
     }
 
     .abtxt {

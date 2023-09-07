@@ -26,7 +26,7 @@ const Utilities = () => {
           for the airdrop distribution.
         </p>
 
-        <p style={{ textAlign: "center", fontSize: "15px" }}>
+        <p style={{ textAlign: "center", fontSize: "15px" }} className="participate">
           Click the button to participate in our airdrop
         </p>
 

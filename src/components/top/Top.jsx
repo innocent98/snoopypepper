@@ -1,6 +1,12 @@
+import { useLocation } from "react-router-dom";
 import "./top.scss";
 
 const Top = ({ setMenu }) => {
+  const location = useLocation();
+  const path = location.pathname;
+
+  console.log(path);
+
   const handleMenu = () => {
     setMenu(true);
   };
@@ -14,14 +20,17 @@ const Top = ({ setMenu }) => {
 
         <div className="right">
           <div className="nav">
-            <a href="#home" className="link active">
+            <a
+              href={path === "/airdrop" ? "/" : "#home"}
+              className="link active"
+            >
               Home
             </a>
-            <a href="#about" className="link">
+            <a href={path === "/airdrop" ? "/" : "#about"} className="link">
               About Us
             </a>
             <a
-              href="https://drive.google.com/uc?id=1iJI9RrkEaNNVfFIFFnDiYw_QvahNb6n3&export=download"
+              // href="https://drive.google.com/uc?id=1iJI9RrkEaNNVfFIFFnDiYw_QvahNb6n3&export=download"
               target="_blank"
               download="SNOOPY_PEPE_WHITEPAPER_V1.0.pdf"
               rel="noreferrer"
@@ -29,10 +38,10 @@ const Top = ({ setMenu }) => {
             >
               White Paper
             </a>
-            <a href="#utilities" className="link">
+            <a href={path === "/airdrop" ? "/" : "#utilities"} className="link">
               Tokenomics
             </a>
-            <a href="#contact" className="link">
+            <a href={path === "/airdrop" ? "/" : "#contact"} className="link">
               Contact Us
             </a>
 

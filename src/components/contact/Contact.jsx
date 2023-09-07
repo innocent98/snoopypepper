@@ -24,22 +24,22 @@ const Contact = () => {
           <h2>Contact Us</h2>
           <div className="img">
             <p>Telegram</p>
-            <a href="https://t.me/Snoopy_Pepe" target="_blank">
+            <a href="https://t.me/gator_inu" target="_blank">
               <img src="/tg.png" alt="" />
             </a>
           </div>
 
           <div className="img">
             <p>Twitter</p>
-            <a href="https://twitter.com/snoopy_pepe/" target="_blank">
+            <a href="https://twitter.com/Gator_Inu?t=NAL_eB6XC_XxtsBK5ozMrQ&s=09" target="_blank">
               <img src="/tw.png" alt="" />
             </a>
           </div>
 
-          <div className="img">
+          {/* <div className="img">
             <p>Email:</p>
             <a href="mailto:support@gatorinu.com">support@gatorinu.com</a>
-          </div>
+          </div> */}
         </div>
 
         {/* <div className="right">
@@ -47,7 +47,7 @@ const Contact = () => {
         </div> */}
       </div>
 
-      <p
+      <p className="footer"
         style={{
           fontSize: "15px",
           textAlign: "center",

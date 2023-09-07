@@ -36,8 +36,8 @@
     .right {
       flex: 1.5;
       font-size: 30px;
+      font-family: $lato;
       font-weight: 700;
-      font-family: $popins;
       color: white;
       text-align: left;
       @include l {

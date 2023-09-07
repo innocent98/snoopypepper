@@ -28,15 +28,20 @@
 
   h2 {
     color: $primary;
-    font-family: $popins;
+    font-family: $inter;
+    font-weight: 700;
+    font-size: 34px;
   }
 
   h4 {
-    font-family: $popins;
+    font-family: $inter;
+    margin-top: -25px;
+    font-weight: 700;
   }
 
   p {
-    font-family: $popins;
+    font-family: $lato;
+    font-weight: 700;
     color: white;
     font-size: 20px;
     @include tab {

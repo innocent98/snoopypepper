@@ -12,6 +12,7 @@ import axios from "axios";
 import { getRemainingTimeUntilMsTimestamp } from "../../components/utils/utils";
 import Top from "../top/Top";
 import Sidebar from "../sidebar/Sidebar";
+import Contact from "../contact/Contact";
 
 const defaultRemainingTime = {
   seconds: "00",
@@ -137,7 +138,6 @@ const Airdrop = ({ setMenu, menu }) => {
       <div className="airdropCon">
         <section>
           <h4>AIRDROPPING</h4>
-          {/* <hr /> */}
         </section>
 
         <section>
@@ -255,7 +255,7 @@ const Airdrop = ({ setMenu, menu }) => {
             <h5>
               Invite a friend:{" "}
               <span>
-                <a href="/">{`https://asicore.xyz/airdrop?_id=${123}`}</a>
+                <a href="https://gatorinu.com/airdrop?_id=${123}">{`https://gatorinu.com/airdrop?_id=${123}`}</a>
               </span>
             </h5>
             <p>
@@ -268,7 +268,10 @@ const Airdrop = ({ setMenu, menu }) => {
 
             <div className="details">
               <div className="det">
-                <h5>{userInfo?.balance > 0 ? userInfo?.balance : 0} Points</h5>
+                <h5>
+                  {userInfo?.balance > 0 ? userInfo?.balance : 0}{" "}
+                  <span>Points</span>
+                </h5>
                 <p>Balance</p>
               </div>
               <div className="det">
@@ -276,18 +279,18 @@ const Airdrop = ({ setMenu, menu }) => {
                   {userInfo?.referred / 1000 > 0
                     ? userInfo?.referred / 1000
                     : 0}{" "}
-                  Refer
+                  <span>Refer</span>
                 </h5>
-                <p>Referred</p>
+                <p>Referral</p>
               </div>
               <div className="det">
                 <h5>
                   {userInfo?.referred / 1000 > 0
                     ? userInfo?.referred / 1000
                     : 0}{" "}
-                  Points
+                  <span>Points</span>
                 </h5>
-                <p>Referred Balance</p>
+                <p>Referral Balance</p>
               </div>
             </div>
 
@@ -296,14 +299,14 @@ const Airdrop = ({ setMenu, menu }) => {
                 style={{
                   textAlign: "center",
                   color: "#0da502",
-                  fontSize: "18px",
+                  fontSize: "30px",
                   fontWeight: "bold",
                 }}
               >
                 {userInfo?.referred / 1000 > 0 ? userInfo?.referred / 1000 : 0}{" "}
-                Points
+                <span>Points</span>
               </h5>
-              <p>Total Balance</p>
+              <p style={{marginTop: '-60px'}}>Total Balance</p>
             </div>
 
             <button onClick={handleWithdrawPromt}>WITHDRAW</button>
@@ -345,62 +348,7 @@ const Airdrop = ({ setMenu, menu }) => {
         )} */}
       </div>
 
-      <div className="team">
-        <h2>OUR TEAM </h2>
-        <p>
-          At the heart of Gator Inu's transformative journey stands dedicated
-          and visionary core team. Comprising a diverse blend of blockchain
-          experts, developers, finance professionals, and strategic thinkers,
-          the Gator Inu core team is united by a shared mission – to redefine
-          the future of decentralized finance.
-        </p>
-        <p>
-           Leadership with a Purpose: Led by accomplished individuals with years
-          of experience in blockchain technology and financial innovation, the
-          core team sets the strategic direction for Gator Inu. Their expertise
-          and strategic insights guide the project's growth and ensure that
-          every step
-        </p>
-
-        <div className="wrapper">
-          <div className="left">
-            <h2>Contact Us</h2>
-            <div className="img">
-              <p>Telegram</p>
-              <a href="https://t.me/Snoopy_Pepe" target="_blank">
-                <img src="/tg.png" alt="" />
-              </a>
-            </div>
-
-            <div className="img">
-              <p>Twitter</p>
-              <a href="https://twitter.com/snoopy_pepe/" target="_blank">
-                <img src="/tw.png" alt="" />
-              </a>
-            </div>
-
-            <div className="img">
-              <p>Email:</p>
-              <a href="mailto:support@gatorinu.com">support@gatorinu.com</a>
-            </div>
-          </div>
-
-          {/* <div className="right">
-            <img src="logo_i.png" alt="" />
-          </div> */}
-        </div>
-
-        <p
-          style={{
-            fontSize: "15px",
-            textAlign: "center",
-            marginTop: "80px",
-            color: "lightgray",
-          }}
-        >
-          (c) 2023 Gator-inu. All Rights Reserved
-        </p>
-      </div>
+      <Contact />
     </div>
   );
 };
