@@ -5,8 +5,6 @@ const Top = ({ setMenu }) => {
   const location = useLocation();
   const path = location.pathname;
 
-  console.log(path);
-
   const handleMenu = () => {
     setMenu(true);
   };
