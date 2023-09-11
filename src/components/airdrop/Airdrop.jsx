@@ -232,7 +232,7 @@ const Airdrop = ({ setMenu, menu }) => {
                 <label htmlFor="">
                   <span>Retweet our Airdrop tweet</span>
                   <a
-                    href="#"
+                    href="https://twitter.com/Gator_Inu/status/1701360034045706612?t=a43ENUqrxzg3WjnhAlkzUA&s=19"
                     target="_blank"
                     rel="noreferrer"
                     className="follow"
@@ -319,7 +319,9 @@ const Airdrop = ({ setMenu, menu }) => {
                 <p style={{ marginTop: "-60px" }}>Total Balance</p>
               </div>
 
-              <button onClick={handleWithdrawPromt}>WITHDRAW</button>
+              <button onClick={handleWithdrawPromt} disabled>
+                WITHDRAW
+              </button>
             </div>
           </section>
         )}
