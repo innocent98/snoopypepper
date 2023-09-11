@@ -31,7 +31,7 @@ const Utilities = () => {
         </p>
 
         <p style={{ textAlign: "center", marginTop: "30px" }}>
-          <a href="/">AIRDROP</a>
+          <a href="/airdrop">AIRDROP</a>
         </p>
 
         <div style={{ marginTop: "150px" }}>

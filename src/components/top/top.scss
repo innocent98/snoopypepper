@@ -16,13 +16,14 @@
     border-radius: 20px;
     border: 1px solid white;
     @include tab {
-      width: 80%;
+      width: 85%;
       gap: 0px;
-      padding: 0px 20px;
+      padding: 0px 8px;
     }
 
     .left {
       flex: 1;
+      padding: 5px;
       @include tab {
         flex: none;
       }

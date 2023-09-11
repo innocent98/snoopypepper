@@ -170,9 +170,29 @@ const Airdrop = ({ setMenu, menu }) => {
             <form className="row" onSubmit={handleAirdrop}>
               <div className="col">
                 <label htmlFor="">
+                  <span>Subscribe to our Telegram Channel</span>{" "}
+                  <a
+                    href="https://t.me/gatorinu_announcement"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="follow"
+                  >
+                    Subscribe
+                  </a>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Input your telegram username"
+                  required
+                  name="telegram_channel"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="col">
+                <label htmlFor="">
                   <span>Join our Telegram</span>{" "}
                   <a
-                    href="https://t.me/asi_core"
+                    href="https://t.me/gator_inu"
                     target="_blank"
                     rel="noreferrer"
                     className="follow"
@@ -192,7 +212,7 @@ const Airdrop = ({ setMenu, menu }) => {
                 <label htmlFor="">
                   <span>Follow us on Twitter</span>{" "}
                   <a
-                    href="https://twitter.com/asi_core"
+                    href="https://twitter.com/Gator_Inu?t=NAL_eB6XC_XxtsBK5ozMrQ&s=09"
                     target="_blank"
                     rel="noreferrer"
                     className="follow"
@@ -212,7 +232,7 @@ const Airdrop = ({ setMenu, menu }) => {
                 <label htmlFor="">
                   <span>Retweet our Airdrop tweet</span>
                   <a
-                    href="https://twitter.com/asi_core/status/1657113213434056731?t=HFJY8svRn12ufVq4MaLRKA&s=19"
+                    href="#"
                     target="_blank"
                     rel="noreferrer"
                     className="follow"
