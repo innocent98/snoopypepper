@@ -13,8 +13,12 @@ import Utilities from "./components/utilitis/Utilities";
 import Contact from "./components/contact/Contact";
 import Sidebar from "./components/sidebar/Sidebar";
 import Airdrop from "./components/airdrop/Airdrop";
+import { useSelector } from "react-redux";
+import Login from "./components/airdrop/Login";
 
 function App() {
+  const user = useSelector((state) => state.user.currentUser);
+
   const [menu, setMenu] = useState(false);
 
   const router = createBrowserRouter([
@@ -35,9 +39,21 @@ function App() {
       path: "/airdrop",
       element: (
         <div className="main">
-           <Sidebar setMenu={setMenu} menu={menu} />
+          <Sidebar setMenu={setMenu} menu={menu} />
           <Airdrop setMenu={setMenu} menu={menu} />
         </div>
+      ),
+    },
+
+    {
+      path: "/login",
+      element: !user ? (
+        <div className="main">
+          <Sidebar setMenu={setMenu} menu={menu} />
+          <Login />
+        </div>
+      ) : (
+        <Navigate to="/airdrop" />
       ),
     },
   ]);
