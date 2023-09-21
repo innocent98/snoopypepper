@@ -26,7 +26,9 @@ const Login = () => {
       const res = await axios.post(baseUrl + "user/login", {
         ...inputs,
       });
-      dispatch(loginSuccess(res.data));
+
+      // dispatch(loginSuccess(res.data));
+      window.location.replace("/airdrop?ad=" + res.data?._id);
     } catch (error) {
       alert(error.response.data);
       dispatch(loginFailure());
