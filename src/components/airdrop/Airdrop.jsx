@@ -11,7 +11,6 @@ import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { getRemainingTimeUntilMsTimestamp } from "../../components/utils/utils";
 import Top from "../top/Top";
-import Sidebar from "../sidebar/Sidebar";
 import Contact from "../contact/Contact";
 import ReferralList from "./ReferralList";
 
@@ -28,6 +27,8 @@ const Airdrop = ({ setMenu, menu }) => {
   const dispatch = useDispatch();
   const location = useLocation();
   const path = location.search;
+
+  const replacePath = path.replace("?ad=", "");
 
   const baseUrl = import.meta.env.VITE_REACT_API_URL;
 
@@ -46,10 +47,9 @@ const Airdrop = ({ setMenu, menu }) => {
     e.preventDefault();
     dispatch(loginStart());
     try {
-      const res = await axios.post(
-        path ? `${baseUrl}user/register${path}` : `${baseUrl}user/register`,
-        { ...inputs }
-      );
+      const res = await axios.post(`${baseUrl}user/airdrop/${replacePath}`, {
+        ...inputs,
+      });
       dispatch(loginSuccess(res.data));
       // alert(res.data);
       alert("You have successfully participated in the airdrop.");
@@ -58,6 +58,28 @@ const Airdrop = ({ setMenu, menu }) => {
       dispatch(loginFailure());
     }
   };
+
+  // check if user complete task
+  const handleUserCheck = async () => {
+    try {
+      const res = await axios.get(`${baseUrl}user/${replacePath}/user`);
+      if (res.data?.balance > 0) {
+        dispatch(loginSuccess(res.data));
+      }
+    } catch (error) {}
+  };
+
+  useEffect(() => {
+    let mounted = true;
+
+    if (mounted) {
+      handleUserCheck();
+    }
+
+    return () => {
+      mounted = false;
+    };
+  }, [path]);
 
   // get user info
   const findUser = useCallback(async () => {
@@ -136,7 +158,11 @@ const Airdrop = ({ setMenu, menu }) => {
 
       <div className="airdropCon">
         <section>
-          <h4>AIRDROPPING</h4>
+          <h4>
+            {user
+              ? "AIRDROPPING"
+              : "Complete some tasks and earn 100 Point As Reward"}
+          </h4>
         </section>
 
         <section>
@@ -167,7 +193,58 @@ const Airdrop = ({ setMenu, menu }) => {
 
         {!user && (
           <section>
-            <form className="row" onSubmit={handleAirdrop}>
+            <form className="row airdrop_form" onSubmit={handleAirdrop}>
+              <p>Your tasks are Pending for the approval!</p>
+
+              <p className="parag">
+                Just Follow, Comment, Like and Share{" "}
+                <span>Gator-inu Token</span> today!{" "}
+              </p>
+
+              <p className="paragraph">
+                Please complete the following simple tasks and earn 100 points.
+                When your referrals complete the tasks you will earn 10 points
+                each.. Please complete ALL the tasks to earn your points. Thank
+                you.
+              </p>
+
+              <div className="col">
+                <label
+                  htmlFor=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "row",
+                  }}
+                >
+                  <span>Task 1</span> <img src="/twi.png" alt="" />
+                </label>
+
+                <label htmlFor="">
+                  <span>Join our Telegram group</span>{" "}
+                  <a
+                    href="https://t.me/gator_inu"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="follow"
+                  >
+                    1. Join Gatorinu Telegram*
+                  </a>
+                  <p>
+                    2. After joining the group please enter Telegram username
+                    below
+                  </p>
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Input your telegram username"
+                  required
+                  name="telegram"
+                  onChange={handleChange}
+                />
+              </div>
+
               <div className="col">
                 <label htmlFor="">
                   <span>Subscribe to our Telegram Channel</span>{" "}
@@ -177,9 +254,13 @@ const Airdrop = ({ setMenu, menu }) => {
                     rel="noreferrer"
                     className="follow"
                   >
-                    Subscribe
+                    3. Subscribe to our Telegram Channel*
                   </a>
+                  <p>
+                    After joining the group please enter Telegram username below
+                  </p>
                 </label>
+
                 <input
                   type="text"
                   placeholder="Input your telegram username"
@@ -188,37 +269,30 @@ const Airdrop = ({ setMenu, menu }) => {
                   onChange={handleChange}
                 />
               </div>
+
               <div className="col">
-                <label htmlFor="">
-                  <span>Join our Telegram</span>{" "}
-                  <a
-                    href="https://t.me/gator_inu"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="follow"
-                  >
-                    Join
-                  </a>
+                <label
+                  htmlFor=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "row",
+                  }}
+                >
+                  <span>Task 2</span> <img src="/x.png" alt="" />
                 </label>
-                <input
-                  type="text"
-                  placeholder="Input your telegram username"
-                  required
-                  name="telegram"
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col">
+
                 <label htmlFor="">
-                  <span>Follow us on Twitter</span>{" "}
+                  <span>Twitter Follow & Retweet*</span>{" "}
                   <a
                     href="https://twitter.com/Gator_Inu?t=NAL_eB6XC_XxtsBK5ozMrQ&s=09"
                     target="_blank"
                     rel="noreferrer"
                     className="follow"
                   >
-                    Follow
+                    5. Follow Gator inu on twitter
                   </a>
+                  <p>6. After following please enter twitter username below</p>
                 </label>
                 <input
                   type="text"
@@ -228,17 +302,20 @@ const Airdrop = ({ setMenu, menu }) => {
                   onChange={handleChange}
                 />
               </div>
+
               <div className="col">
                 <label htmlFor="">
-                  <span>Retweet our Airdrop tweet</span>
+                  <span>Retweet our Airdrop post*</span>
                   <a
                     href="https://twitter.com/Gator_Inu/status/1701360034045706612?t=a43ENUqrxzg3WjnhAlkzUA&s=19"
                     target="_blank"
                     rel="noreferrer"
                     className="follow"
                   >
-                    Retweet
+                    7. Follow Gator inu on twitter
                   </a>
+
+                  <p>8. After retweeting please enter twitter retweet link</p>
                 </label>
                 <input
                   type="text"
@@ -248,8 +325,42 @@ const Airdrop = ({ setMenu, menu }) => {
                   onChange={handleChange}
                 />
               </div>
+
               <div className="col">
-                <label htmlFor="">Input your BSC address</label>
+                <label
+                  htmlFor=""
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "row",
+                  }}
+                >
+                  <span>Task 3</span> <img src="/yo.png" alt="" />
+                </label>
+
+                <label htmlFor="">
+                  <span>Subscribe to our Youtube Channel*</span>{" "}
+                  <a
+                    href="https://twitter.com/Gator_Inu?t=NAL_eB6XC_XxtsBK5ozMrQ&s=09"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="follow"
+                  >
+                    9. Subscribe to our YouTube channel
+                  </a>
+                  <p>10. After following please enter Youtube username below</p>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Input your twitter username"
+                  required
+                  name="youtube"
+                  onChange={handleChange}
+                />
+              </div>
+
+              {/* <div className="col">
+                <label htmlFor="">Enter your BSC Wallet Address</label>
                 <input
                   type="text"
                   placeholder="Input your BSC address"
@@ -257,10 +368,9 @@ const Airdrop = ({ setMenu, menu }) => {
                   name="address"
                   onChange={handleChange}
                 />
-              </div>
-              <button type="submit" disabled={isFetching}>
-                submit
-              </button>
+              </div> */}
+
+              <button type="submit">submit</button>
             </form>
           </section>
         )}
@@ -272,8 +382,8 @@ const Airdrop = ({ setMenu, menu }) => {
                 Invite a friend:{" "}
                 <span>
                   <a
-                    href={`https://gatorinu.com/airdrop?_id=${user._id}`}
-                  >{`https://gatorinu.com/airdrop?_id=${user._id}`}</a>
+                    href={`https://gatorinu.com/register?_id=${user._id}`}
+                  >{`https://gatorinu.com/register?_id=${user._id}`}</a>
                 </span>
               </h5>
               <p>

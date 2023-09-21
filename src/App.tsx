@@ -15,6 +15,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Airdrop from "./components/airdrop/Airdrop";
 import { useSelector } from "react-redux";
 import Login from "./components/airdrop/Login";
+import Signup from "./components/airdrop/Signup";
 
 function App() {
   const user = useSelector((state) => state.user.currentUser);
@@ -41,6 +42,16 @@ function App() {
         <div className="main">
           <Sidebar setMenu={setMenu} menu={menu} />
           <Airdrop setMenu={setMenu} menu={menu} />
+        </div>
+      ),
+    },
+
+    {
+      path: "/register",
+      element: (
+        <div className="main">
+          <Sidebar setMenu={setMenu} menu={menu} />
+          <Signup setMenu={setMenu} menu={menu} />
         </div>
       ),
     },

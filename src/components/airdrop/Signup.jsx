@@ -4,10 +4,13 @@ import { loginFailure, loginStart, loginSuccess } from "../../redux/userRedux";
 import { useState } from "react";
 import axios from "axios";
 import Top from "../top/Top";
+import { useLocation } from "react-router-dom";
 
-const Login = () => {
+const Signup = ({ setMenu, menu }) => {
   const { isFetching } = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const location = useLocation();
+  const path = location.search;
 
   const baseUrl = import.meta.env.VITE_REACT_API_URL;
 
@@ -23,10 +26,13 @@ const Login = () => {
     e.preventDefault();
     dispatch(loginStart());
     try {
-      const res = await axios.post(baseUrl + "user/login", {
-        ...inputs,
-      });
-      dispatch(loginSuccess(res.data));
+      const res = await axios.post(
+        path ? `${baseUrl}user/register${path}` : `${baseUrl}user/register`,
+        { ...inputs }
+      );
+
+      //   dispatch(loginSuccess(res.data));
+      window.location.replace("/airdrop?ad=" + res.data?._id);
     } catch (error) {
       alert(error.response.data);
       dispatch(loginFailure());
@@ -35,20 +41,17 @@ const Login = () => {
 
   return (
     <div className="airdrop" style={{ height: "100vh" }}>
-      <Top />
+      <Top setMenu={setMenu} />
       <div className="airdropCon">
         <section>
-          <h4>Login to see your earnings information</h4>
+          <h4>Sign up to participate in the airdrop</h4>
         </section>
 
         <section>
           <form className="row" onSubmit={handleAirdrop}>
             <div className="col">
-              <label
-                htmlFor=""
-                style={{ textAlign: "center", margin: "20px", color: "white" }}
-              >
-                Input your registered BSC address to login
+              <label htmlFor="" style={{ textAlign: "center", margin: "20px", color:'white' }}>
+                Continue registration with your BSC wallet address
               </label>
               <input
                 type="text"
@@ -58,7 +61,9 @@ const Login = () => {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit">{"SUBMIT"}</button>
+            <button type="submit">
+              {"SUBMIT"}
+            </button>
           </form>
         </section>
       </div>
@@ -66,4 +71,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

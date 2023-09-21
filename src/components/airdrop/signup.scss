@@ -1,0 +1,74 @@
+@import "../../../global.scss";
+
+.airdrop {
+  .container {
+    h2 {
+      color: black;
+      font-size: 45px;
+      font-weight: 700;
+      font-family: $lato;
+      text-align: center;
+      margin-bottom: -20px;
+      @include tab {
+        font-size: 35px;
+      }
+    }
+
+    h4 {
+      color: grey;
+      font-size: 20px;
+      font-weight: 500;
+      font-family: $lato;
+      text-align: center;
+      // margin-bottom: -20px;
+      margin-bottom: 50px;
+      @include tab {
+        font-size: 14px;
+      }
+    }
+
+    .row {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .col {
+        width: 40%;
+        @include tab {
+            width: 100%;
+          }
+        input {
+          width: 100%;
+          background-color: white;
+          height: 35px;
+          border-radius: 30px;
+          border: none;
+          color: black;
+          font-family: $lato;
+          font-size: 20px;
+          padding: 0 10px;
+          &:focus{
+            outline: none;
+          }
+        }
+      }
+      button {
+        background-color: $primary;
+        border: none;
+        padding: 8px;
+        width: 16%;
+        border-radius: 30px;
+        margin-top: 15px;
+        align-self: center;
+        font-family: $lato;
+        font-weight: 700;
+        font-size: 20px;
+        cursor: pointer;
+        @include tab {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

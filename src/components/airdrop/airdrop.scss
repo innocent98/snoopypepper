@@ -27,6 +27,7 @@
       font-family: $lato;
       text-align: center;
       margin-bottom: -20px;
+      text-transform: capitalize;
       @include tab {
         font-size: 14px;
       }
@@ -102,7 +103,7 @@
         flex-direction: column;
         width: 100%;
         label {
-          color: white;
+          color: black;
           font-family: $popins;
           font-weight: 400;
           font-size: 18px;
@@ -125,7 +126,7 @@
         input {
           padding: 15px;
           border-radius: 8px;
-          border: none;
+          border: 1px solid lightgray;
           background-color: white;
           color: black;
           font-family: $popins;
@@ -156,6 +157,72 @@
         @include tab {
           font-size: 10px;
         }
+      }
+    }
+
+    .airdrop_form {
+      background-color: white;
+      padding: 20px;
+
+      .col {
+        label {
+          color: black;
+          font-family: $popins;
+          font-weight: 600;
+          font-size: 18px;
+          display: flex;
+          flex-direction: column;
+          justify-content: unset;
+          // align-items: center;
+          gap: 10px;
+          margin-bottom: 5px;
+          @include tab {
+            font-size: 12px;
+          }
+
+          img{
+            width: 20px;
+          }
+
+          .follow {
+            color: rgb(0, 85, 255);
+            cursor: pointer;
+            text-decoration: none;
+            width: "auto";
+            font-family: $popins;
+            font-weight: 500;
+            font-size: 14px;
+          }
+
+          p{
+            color: black;
+            font-size: 14px;
+            margin-top: -10px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      p {
+        color: $green;
+        font-family: $lato;
+      }
+
+      .parag {
+        color: black;
+        text-align: center;
+        font-size: 18px;
+        margin-top: -15px;
+        span {
+          font-weight: 900;
+        }
+      }
+
+      .paragraph {
+        color: gray;
+        text-align: center;
+        margin-top: -20px;
+        font-size: 14px;
       }
     }
 
@@ -357,7 +424,7 @@
 
   .referralList {
     margin-left: 100px;
-  
+
     p {
       font-family: $lato;
       font-weight: 700;

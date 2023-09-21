@@ -44,7 +44,7 @@ const Top = ({ setMenu }) => {
               Contact Us
             </a>
 
-            <a href="/airdrop" className="link">
+            <a href="/register" className="link">
               Airdrop
             </a>
 
