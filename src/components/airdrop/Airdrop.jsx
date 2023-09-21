@@ -112,7 +112,7 @@ const Airdrop = ({ setMenu, menu }) => {
   // // get countdown
   const [remainingTimeToUnlock, setRemainingTimeToUnlock] =
     useState(defaultRemainingTime);
-  let monthsToAdd = new Date("26 Aug 2023");
+  let monthsToAdd = new Date("15 Sept 2023");
   const futureDate = monthsToAdd.setMonth(monthsToAdd.getMonth() + 1);
 
   useEffect(() => {
@@ -194,7 +194,7 @@ const Airdrop = ({ setMenu, menu }) => {
         {!user && (
           <section>
             <form className="row airdrop_form" onSubmit={handleAirdrop}>
-              <p>Your tasks are Pending for the approval!</p>
+              <p style={{textAlign: 'center'}}>Your tasks are Pending for the approval!</p>
 
               <p className="parag">
                 Just Follow, Comment, Like and Share{" "}
@@ -307,12 +307,12 @@ const Airdrop = ({ setMenu, menu }) => {
                 <label htmlFor="">
                   <span>Retweet our Airdrop post*</span>
                   <a
-                    href="https://twitter.com/Gator_Inu/status/1701360034045706612?t=a43ENUqrxzg3WjnhAlkzUA&s=19"
+                    href="https://twitter.com/Gator_Inu/status/1704812330230407470?t=QMNucF3LSv_yVojJ2qHjyQ&s=19"
                     target="_blank"
                     rel="noreferrer"
                     className="follow"
                   >
-                    7. Follow Gator inu on twitter
+                    7. Retweet Gator inu tweet
                   </a>
 
                   <p>8. After retweeting please enter twitter retweet link</p>
@@ -326,7 +326,7 @@ const Airdrop = ({ setMenu, menu }) => {
                 />
               </div>
 
-              <div className="col">
+              {/* <div className="col">
                 <label
                   htmlFor=""
                   style={{
@@ -357,7 +357,7 @@ const Airdrop = ({ setMenu, menu }) => {
                   name="youtube"
                   onChange={handleChange}
                 />
-              </div>
+              </div> */}
 
               {/* <div className="col">
                 <label htmlFor="">Enter your BSC Wallet Address</label>

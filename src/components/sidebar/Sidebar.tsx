@@ -47,7 +47,7 @@ const Sidebar = ({ setMenu, menu }) => {
       >
         Contact
       </a>
-      <a href="/airdrop" className="link" onClick={handleMenu}>
+      <a href="/register" className="link" onClick={handleMenu}>
         Airdrop
       </a>
 
