@@ -112,8 +112,8 @@ const Airdrop = ({ setMenu, menu }) => {
   // // get countdown
   const [remainingTimeToUnlock, setRemainingTimeToUnlock] =
     useState(defaultRemainingTime);
-  let monthsToAdd = new Date("15 Sept 2023");
-  const futureDate = monthsToAdd.setMonth(monthsToAdd.getMonth() + 1);
+  let monthsToAdd = new Date("30 Nov 2023");
+  const futureDate = monthsToAdd.setMonth(monthsToAdd.getMonth());
 
   useEffect(() => {
     const intervalId = setInterval(() => {
