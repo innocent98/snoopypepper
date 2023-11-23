@@ -51,11 +51,11 @@ const Signup = ({ setMenu, menu }) => {
           <form className="row" onSubmit={handleAirdrop}>
             <div className="col">
               <label htmlFor="" style={{ textAlign: "center", margin: "20px", color:'white' }}>
-                Continue registration with your BSC wallet address
+                Continue registration with your CORE wallet address
               </label>
               <input
                 type="text"
-                placeholder="Input your BSC address"
+                placeholder="Input your CORE address"
                 required
                 name="address"
                 onChange={handleChange}

@@ -6,7 +6,7 @@ const Utilities = () => {
       <h2>TOKENOMICS</h2>
 
       <div className="tokenomics">
-        <img src="tokenomics.png" alt="" />
+        <img src="new_tokenomics.jpg" alt="" />
       </div>
 
       <div className="airdroping">
@@ -35,7 +35,7 @@ const Utilities = () => {
         </p>
 
         <div style={{ marginTop: "150px" }}>
-          <img src="road_map.png" alt="" />
+          <img src="road_map2.png" alt="" />
         </div>
       </div>
     </div>

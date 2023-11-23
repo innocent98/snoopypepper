@@ -50,11 +50,11 @@ const Login = () => {
                 htmlFor=""
                 style={{ textAlign: "center", margin: "20px", color: "white" }}
               >
-                Input your registered BSC address to login
+                Input your registered CORE address to login
               </label>
               <input
                 type="text"
-                placeholder="Input your BSC address"
+                placeholder="Input your CORE address"
                 required
                 name="address"
                 onChange={handleChange}

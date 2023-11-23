@@ -23,7 +23,8 @@ const Sidebar = ({ setMenu, menu }) => {
       >
         Home
       </a>
-      <a
+ 
+      {/* <a
         href="https://drive.google.com/uc?id=1qJsNqNDIfG2EliIumhEGtFkJAnb6EJai&export=download"
         // href="https://drive.google.com/uc?id=1iJI9RrkEaNNVfFIFFnDiYw_QvahNb6n3&export=download"
         target="_blank"
@@ -32,7 +33,8 @@ const Sidebar = ({ setMenu, menu }) => {
         className="link"
       >
         White Paper
-      </a>
+      </a> */}
+      
       <a
         href={path === "/airdrop" ? "/" : "#about"}
         className="link"

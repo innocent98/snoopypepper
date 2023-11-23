@@ -112,7 +112,7 @@ const Airdrop = ({ setMenu, menu }) => {
   // // get countdown
   const [remainingTimeToUnlock, setRemainingTimeToUnlock] =
     useState(defaultRemainingTime);
-  let monthsToAdd = new Date("30 Nov 2023");
+  let monthsToAdd = new Date("04 Dec 2023");
   const futureDate = monthsToAdd.setMonth(monthsToAdd.getMonth());
 
   useEffect(() => {
@@ -360,10 +360,10 @@ const Airdrop = ({ setMenu, menu }) => {
               </div> */}
 
               {/* <div className="col">
-                <label htmlFor="">Enter your BSC Wallet Address</label>
+                <label htmlFor="">Enter your CORE Wallet Address</label>
                 <input
                   type="text"
-                  placeholder="Input your BSC address"
+                  placeholder="Input your CORE address"
                   required
                   name="address"
                   onChange={handleChange}

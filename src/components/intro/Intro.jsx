@@ -4,7 +4,7 @@ const Intro = () => {
   return (
     <div className="intro" id="intro">
       <div className="image">
-        <img src="/intro.png" alt="" />
+        <img src="/intro2.png" alt="" />
       </div>
 
       {/* <div className="wrapper">
