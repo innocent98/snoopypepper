@@ -307,7 +307,7 @@ const Airdrop = ({ setMenu, menu }) => {
                 <label htmlFor="">
                   <span>Retweet our Airdrop post*</span>
                   <a
-                    href="https://twitter.com/Gator_Inu/status/1704812330230407470?t=QMNucF3LSv_yVojJ2qHjyQ&s=19"
+                    href="https://twitter.com/Gator_Inu/status/1727672871789441059?t=F9owLfChoitGgbYZxzK3WQ&s=19"
                     target="_blank"
                     rel="noreferrer"
                     className="follow"
