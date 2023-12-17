@@ -23,20 +23,22 @@ const Signup = ({ setMenu, menu }) => {
   };
 
   const handleAirdrop = async (e) => {
-    e.preventDefault();
-    dispatch(loginStart());
-    try {
-      const res = await axios.post(
-        path ? `${baseUrl}user/register${path}` : `${baseUrl}user/register`,
-        { ...inputs }
-      );
+    // e.preventDefault();
+    // dispatch(loginStart());
+    // try {
+    //   const res = await axios.post(
+    //     path ? `${baseUrl}user/register${path}` : `${baseUrl}user/register`,
+    //     { ...inputs }
+    //   );
 
-      //   dispatch(loginSuccess(res.data));
-      window.location.replace("/airdrop?ad=" + res.data?._id);
-    } catch (error) {
-      alert(error.response.data);
-      dispatch(loginFailure());
-    }
+    //   //   dispatch(loginSuccess(res.data));
+    //   window.location.replace("/airdrop?ad=" + res.data?._id);
+    // } catch (error) {
+    //   alert(error.response.data);
+    //   dispatch(loginFailure());
+    // }
+
+    alert("No airdrop available at the momnent.");
   };
 
   return (
@@ -50,7 +52,10 @@ const Signup = ({ setMenu, menu }) => {
         <section>
           <form className="row" onSubmit={handleAirdrop}>
             <div className="col">
-              <label htmlFor="" style={{ textAlign: "center", margin: "20px", color:'white' }}>
+              <label
+                htmlFor=""
+                style={{ textAlign: "center", margin: "20px", color: "white" }}
+              >
                 Continue registration with your CORE wallet address
               </label>
               <input
@@ -61,9 +66,7 @@ const Signup = ({ setMenu, menu }) => {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit">
-              {"SUBMIT"}
-            </button>
+            <button type="submit">{"SUBMIT"}</button>
           </form>
         </section>
       </div>
